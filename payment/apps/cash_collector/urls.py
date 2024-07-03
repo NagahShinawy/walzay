@@ -11,5 +11,4 @@ urlpatterns = [
     path("tasks/", TaskListAPIView.as_view(), name="task-list"),
     path("next_task/", NextTaskAPIView.as_view(), name="next-task"),
     path("collect/", CollectAmountAPIView.as_view(), name="collect-amount"),
-
 ]

@@ -99,7 +99,7 @@ class CollectAmountAPIView(generics.CreateAPIView):
             CollectionRecord.objects.create(
                 collector=collector,
                 amount_collected=amount_collected,
-                collected_at=task.amount_due_at
+                collected_at=task.amount_due_at,
             )
         else:
             raise CashCollectorFrozenError
@@ -117,4 +117,3 @@ class CollectAmountAPIView(generics.CreateAPIView):
             )
 
         return Response(serializer.data, status=status.HTTP_201_CREATED)
-

@@ -43,4 +43,3 @@ class CollectAmountSerializer(serializers.Serializer):
 
 class PayAmountSerializer(serializers.Serializer):
     amount_delivered = serializers.DecimalField(max_digits=10, decimal_places=2)
-
